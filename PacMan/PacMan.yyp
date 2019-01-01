@@ -31,10 +31,34 @@
     },
     "resources": [
         {
+            "Key": "04746e15-4d06-4098-a33f-e0893e954e60",
+            "Value": {
+                "id": "ba5af24b-65b1-4c33-ab88-72821755b4cb",
+                "resourcePath": "scripts\\anim\\anim.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0634457b-2eef-4f36-a103-e02a0ce169e2",
+            "Value": {
+                "id": "2f07fc77-03e8-4e14-903b-ebd7db886139",
+                "resourcePath": "sprites\\spr_player\\spr_player.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "08f343a3-e0e8-4768-b1e0-1b4a6e0e2a75",
             "Value": {
                 "id": "c93f9d27-1237-41f9-9960-b4b8fa11756c",
                 "resourcePath": "views\\08f343a3-e0e8-4768-b1e0-1b4a6e0e2a75.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "126c5d16-71cb-4c34-93eb-f03011b416df",
+            "Value": {
+                "id": "3dc79bdd-9e92-4c0e-9896-50a75fc12d7e",
+                "resourcePath": "views\\126c5d16-71cb-4c34-93eb-f03011b416df.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -63,6 +87,14 @@
             }
         },
         {
+            "Key": "30429767-42c1-4c6c-bf96-f76a081c05c6",
+            "Value": {
+                "id": "8c885666-5db3-4007-9e42-5e9af1f744bc",
+                "resourcePath": "scripts\\calc_movement\\calc_movement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "359294fa-5bb1-4cef-8c6d-80ce16b84297",
             "Value": {
                 "id": "08e1cfa8-7a35-402c-abaa-0f5b7587295c",
@@ -87,11 +119,27 @@
             }
         },
         {
+            "Key": "3d954214-11df-47a4-b126-afc873b07b64",
+            "Value": {
+                "id": "35c36d73-edd3-404f-99ff-e06b27e27ab9",
+                "resourcePath": "objects\\obj_player\\obj_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4653756b-071a-4092-94f0-187d874f439e",
             "Value": {
                 "id": "6e3fb324-d659-4975-8ca8-e8f3252fe83a",
                 "resourcePath": "views\\4653756b-071a-4092-94f0-187d874f439e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5ac0465d-a902-4368-ba00-ad53c6555fbe",
+            "Value": {
+                "id": "c438af87-3848-49c8-bb37-10d7a2973173",
+                "resourcePath": "objects\\obj_game\\obj_game.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -116,6 +164,46 @@
                 "id": "06ae0b05-3969-4219-9ae7-c324789161a7",
                 "resourcePath": "views\\6b800a32-c685-4ebc-9161-9b77befa9409.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "70a899d7-9a19-427f-bc26-d58cabfaa1b7",
+            "Value": {
+                "id": "21cb8e76-26a2-4ab0-b71f-c6ee23765483",
+                "resourcePath": "scripts\\get_input\\get_input.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7f74f5af-acdf-4d3e-887a-02122090cdac",
+            "Value": {
+                "id": "00e95feb-5598-49ef-9d72-662d01806996",
+                "resourcePath": "sprites\\spr_tile_collisions\\spr_tile_collisions.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "85a0f444-b78d-4dcd-8287-5b5fa22682e9",
+            "Value": {
+                "id": "e6972bcc-1585-4f67-8f54-c5bc38578838",
+                "resourcePath": "scripts\\macros\\macros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8f979f4a-7053-43bd-89f1-63fe11e6c817",
+            "Value": {
+                "id": "572a5458-53ba-4dd4-b5f9-516321e75198",
+                "resourcePath": "scripts\\check_collisions\\check_collisions.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a2ebeaeb-64ad-4490-87da-3fa28af01c93",
+            "Value": {
+                "id": "c1854000-336e-4b3a-aa95-6c3f13d90ade",
+                "resourcePath": "tilesets\\collision\\collision.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -176,7 +264,11 @@
         }
     ],
     "script_order": [
-        
+        "70a899d7-9a19-427f-bc26-d58cabfaa1b7",
+        "30429767-42c1-4c6c-bf96-f76a081c05c6",
+        "8f979f4a-7053-43bd-89f1-63fe11e6c817",
+        "04746e15-4d06-4098-a33f-e0893e954e60",
+        "85a0f444-b78d-4dcd-8287-5b5fa22682e9"
     ],
     "tutorial": ""
 }
