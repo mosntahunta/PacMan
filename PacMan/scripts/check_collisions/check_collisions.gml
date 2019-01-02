@@ -25,54 +25,72 @@ vsp_decimal = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_decimal;
 
 //
-// horizontal collision
+// apply direction to speed
 //
-var h_side;
-// determine which side to test
-if (hsp > 0) {
-	h_side = bbox_right; 
-} else {
-	h_side = bbox_left;
+switch next_dir {
+	case next_direction.LEFT:
+		hsp = -hsp_max;
+	break;
+	case next_direction.RIGHT:
+		hsp = hsp_max;
+	break;
+	case next_direction.UP:
+		vsp = -vsp_max;
+	break;
+	case next_direction.DOWN:
+		vsp = vsp_max;
+	break;
 }
 
-// check top and bottom of side
-var t1 = tilemap_get_at_pixel(global.map, h_side + hsp, bbox_top);
-var t2 = tilemap_get_at_pixel(global.map, h_side + hsp, bbox_bottom);
+// face the correct way
+if (hsp != 0.0) h_facing = sign(hsp);
+if (vsp != 0.0) v_facing = sign(vsp);
 
-// collision found
-if  t1 != VOID or t2 != VOID {
-	//if hsp > 0 {
-	//	x = x - (x mod global.tile_size) + global.tile_size - (h_side - x) - 1;
-	//} else {
-	//	x = x - (x mod global.tile_size) - (h_side - x);
-	//}
+//
+// horizontal collision detection with tiles
+//
+var side = 0;
+if hsp > 0 {
+	side = bbox_right;
+} else {
+	side = bbox_left;
+}
+
+var t1 = tilemap_get_at_pixel(global.map, side + hsp, bbox_top);
+var t2 = tilemap_get_at_pixel(global.map, side + hsp, bbox_bottom);
+		
+if t1 != VOID or t2 != VOID {
+	if hsp > 0 {
+		x = x - (x mod global.tile_size) + global.tile_size - (side - x) - 1;
+	} else {
+		x = x - (x mod global.tile_size) - (side - x);
+	}
 	hsp = 0;
 }
 
+// apply speed to x position
+x += hsp;
+
 //
-// vertical collision
+// vertical collision detection with tiles
 //
-var v_side;
-// determine which side to test
-if (vsp > 0) {
-	v_side = bbox_bottom; 
+if vsp > 0 {
+	side = bbox_bottom;
 } else {
-	v_side = bbox_top;
+	side = bbox_top;
 }
 
-// check top and bottom of side
-var t1 = tilemap_get_at_pixel(global.map, bbox_left, v_side + vsp);
-var t2 = tilemap_get_at_pixel(global.map, bbox_right, v_side + vsp);
-
-// collision found
-if  t1 != VOID or t2 != VOID {
-	//if vsp > 0 {
-	//	y = y - (y mod global.tile_size) + global.tile_size - (v_side - y) - 1;
-	//} else {
-	//	y = y - (y mod global.tile_size) - (v_side - y);
-	//}
+var t1 = tilemap_get_at_pixel(global.map, bbox_left, side + vsp);
+var t2 = tilemap_get_at_pixel(global.map, bbox_right, side + vsp);
+		
+if t1 != VOID or t2 != VOID {
+	if vsp > 0 {
+		y = y - (y mod global.tile_size) + global.tile_size - (side - y) - 1;
+	} else {
+		y = y - (y mod global.tile_size) - (side - y);
+	}
 	vsp = 0;
 }
 
-x += hsp;
+// apply speed to y position
 y += vsp;
