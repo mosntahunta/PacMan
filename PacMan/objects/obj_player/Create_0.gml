@@ -5,8 +5,8 @@ up = 0;
 down = 0;
 
 ///< movement speed
-hsp_max = 2;
-vsp_max = 2;
+hsp_max = 4;
+vsp_max = 4;
 
 hsp = 0;
 vsp = 0;

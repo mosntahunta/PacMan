@@ -1,3 +1,3 @@
 macros();
-global.tile_size = 32;
+global.tile_size = 30;
 global.map = layer_tilemap_get_id("Collisions");

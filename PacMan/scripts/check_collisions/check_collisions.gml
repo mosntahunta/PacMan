@@ -46,6 +46,9 @@ switch next_dir {
 if (hsp != 0.0) h_facing = sign(hsp);
 if (vsp != 0.0) v_facing = sign(vsp);
 
+image_xscale = h_facing;
+image_yscale = v_facing;
+
 //
 // horizontal collision detection with tiles
 //
@@ -61,9 +64,9 @@ var t2 = tilemap_get_at_pixel(global.map, side + hsp, bbox_bottom);
 		
 if t1 != VOID or t2 != VOID {
 	if hsp > 0 {
-		x = x - (x mod global.tile_size) + global.tile_size - (side - x) - 1;
+		x = x - (side mod global.tile_size) + global.tile_size - 1;
 	} else {
-		x = x - (x mod global.tile_size) - (side - x);
+		x = x - (side mod global.tile_size);
 	}
 	hsp = 0;
 }
@@ -85,9 +88,9 @@ var t2 = tilemap_get_at_pixel(global.map, bbox_right, side + vsp);
 		
 if t1 != VOID or t2 != VOID {
 	if vsp > 0 {
-		y = y - (y mod global.tile_size) + global.tile_size - (side - y) - 1;
+		y = y - (side mod global.tile_size) + global.tile_size - 1;
 	} else {
-		y = y - (y mod global.tile_size) - (side - y);
+		y = y - (side mod global.tile_size);
 	}
 	vsp = 0;
 }
