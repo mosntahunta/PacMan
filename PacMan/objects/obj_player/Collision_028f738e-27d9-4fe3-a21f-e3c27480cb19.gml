@@ -1,1 +1,1 @@
-death = true;
+state = player_states.DIE;

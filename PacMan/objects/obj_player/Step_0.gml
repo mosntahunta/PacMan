@@ -1,11 +1,2 @@
-// key input
-get_input();
-
-// movement
-calc_movement();
-
-// apply movement
-check_collisions();
-
-// animation
-anim();
+// execute the state
+script_execute(states_array[state]);
