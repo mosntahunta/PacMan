@@ -18,6 +18,9 @@ vsp_decimal = 0;
 h_facing = 1; // +ve is right
 v_facing = 1; // +ve is down
 
+///< player death
+death = false;
+
 ///< direction to move when collision is no longer detected
 next_dir = next_direction.LEFT;
 
