@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "4f3e454f-9745-4ad6-8e9f-c90f7dfcd0d7",
+            "Value": {
+                "id": "7f68cdcc-9122-4b1d-a328-9f501f0baed8",
+                "resourcePath": "scripts\\activate_portal\\activate_portal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5ac0465d-a902-4368-ba00-ad53c6555fbe",
             "Value": {
                 "id": "c438af87-3848-49c8-bb37-10d7a2973173",
@@ -400,18 +408,19 @@
         }
     ],
     "script_order": [
+        "85a0f444-b78d-4dcd-8287-5b5fa22682e9",
         "70a899d7-9a19-427f-bc26-d58cabfaa1b7",
         "30429767-42c1-4c6c-bf96-f76a081c05c6",
         "8f979f4a-7053-43bd-89f1-63fe11e6c817",
         "04746e15-4d06-4098-a33f-e0893e954e60",
         "2a2f29cc-81c3-4a39-8c73-0bf32b4de77d",
         "6bbb3eae-9f86-4359-b5bf-9308df67b06c",
-        "85a0f444-b78d-4dcd-8287-5b5fa22682e9",
         "2d00a8f6-3aa8-46bf-9bb4-44eb9588324a",
         "1696a824-0f46-491b-b048-50db3edc3a98",
         "3c3ba372-3f88-4557-9cb0-17b075b42303",
         "773b41a4-06ba-462e-a013-8c863072493a",
-        "6a471a21-7a9c-41bc-8857-e68ddf872270"
+        "6a471a21-7a9c-41bc-8857-e68ddf872270",
+        "4f3e454f-9745-4ad6-8e9f-c90f7dfcd0d7"
     ],
     "tutorial": ""
 }
