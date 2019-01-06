@@ -1,6 +1,23 @@
 image_index = 0;
 image_speed = 0;
 
+///< movement speed
+hsp_max = 4;
+vsp_max = 4;
+
+hsp = 0;
+vsp = 0;
+
+hsp_decimal = 0;
+vsp_decimal = 0;
+
+///< facing
+h_facing = 1; // +ve is right
+v_facing = 1; // +ve is down
+
+///< direction to move when collision is no longer detected
+next_dir = LEFT;
+
 // states
 enum ghost_states
 {
@@ -11,7 +28,7 @@ enum ghost_states
 	FLEE
 }
 
-state = ghost_states.IDLE;
+state = ghost_states.WANDER;
 
 states_array[ghost_states.IDLE] = ghost_idle_state;
 states_array[ghost_states.WANDER] = ghost_wander_state;

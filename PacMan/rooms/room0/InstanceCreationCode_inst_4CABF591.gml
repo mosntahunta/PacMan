@@ -1,3 +1,3 @@
 links_to = 4;
 link_id = 5;
-entrance = entrance_side.TOP;
+entrance = UP;

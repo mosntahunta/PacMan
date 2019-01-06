@@ -19,14 +19,7 @@ h_facing = 1; // +ve is right
 v_facing = 1; // +ve is down
 
 ///< direction to move when collision is no longer detected
-enum next_direction {
-	LEFT,
-	RIGHT,
-	UP,
-	DOWN
-}
-
-next_dir = next_direction.LEFT;
+next_dir = LEFT;
 
 ///< states
 enum player_states

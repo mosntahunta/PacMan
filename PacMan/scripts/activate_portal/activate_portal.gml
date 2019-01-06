@@ -13,19 +13,19 @@ for (var i = 0; i < instance_number(obj_portal); i++) {
 
 with other {
 	switch dest_portal.entrance {
-		case entrance_side.LEFT:
+		case LEFT:
 			x = dest_portal.bbox_left + sprite_width / 2;
 			y = dest_portal.y;
 		break;
-		case entrance_side.RIGHT:
+		case RIGHT:
 			x = dest_portal.bbox_right + sprite_width / 2;
 			y = dest_portal.y;
 		break;
-		case entrance_side.TOP:
+		case UP:
 			x = dest_portal.x;
 			y = dest_portal.bbox_top + sprite_height / 2;
 		break;
-		case entrance_side.BOTTOM:
+		case DOWN:
 			x = dest_portal.x;
 			y = dest_portal.bbox_bottom + sprite_height / 2 + 1;
 		break;

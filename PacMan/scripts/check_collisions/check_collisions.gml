@@ -28,16 +28,16 @@ vsp -= vsp_decimal;
 // apply direction to speed
 //
 switch next_dir {
-	case next_direction.LEFT:
+	case LEFT:
 		hsp = -hsp_max;
 	break;
-	case next_direction.RIGHT:
+	case RIGHT:
 		hsp = hsp_max;
 	break;
-	case next_direction.UP:
+	case UP:
 		vsp = -vsp_max;
 	break;
-	case next_direction.DOWN:
+	case DOWN:
 		vsp = vsp_max;
 	break;
 }

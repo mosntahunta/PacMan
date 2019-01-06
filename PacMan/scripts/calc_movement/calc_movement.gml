@@ -1,11 +1,11 @@
 ///< calculate movement
 
 if right - left < 0 {
-	next_dir = next_direction.LEFT;
+	next_dir = LEFT;
 } else if right - left > 0 {
-	next_dir = next_direction.RIGHT;
+	next_dir = RIGHT;
 } else if down - up < 0 {
-	next_dir = next_direction.UP;
+	next_dir = UP;
 } else if down - up > 0 {
-	next_dir = next_direction.DOWN;
+	next_dir = DOWN;
 }
