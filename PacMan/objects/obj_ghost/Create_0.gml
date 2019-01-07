@@ -28,7 +28,7 @@ enum ghost_states
 	FLEE
 }
 
-state = ghost_states.WANDER;
+state = ghost_states.CHASE;
 
 states_array[ghost_states.IDLE] = ghost_idle_state;
 states_array[ghost_states.WANDER] = ghost_wander_state;

@@ -1,3 +1,7 @@
+//
+// ghost wander state
+//
+
 if hsp == 0 and vsp == 0 {
 	switch next_dir {
 		case LEFT:
@@ -15,3 +19,6 @@ if hsp == 0 and vsp == 0 {
 	}
 }
 check_collisions();
+
+// animation
+anim();
