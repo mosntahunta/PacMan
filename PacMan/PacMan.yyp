@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "2bf54756-32f2-438f-80f6-3372212f1700",
+            "Value": {
+                "id": "64e1c58d-de16-4448-b6cb-38191120994f",
+                "resourcePath": "sprites\\spr_intersection\\spr_intersection.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2d00a8f6-3aa8-46bf-9bb4-44eb9588324a",
             "Value": {
                 "id": "0e56d3fb-8e35-4797-a9cc-a5279de7d580",
@@ -244,6 +252,14 @@
                 "id": "46f26213-ecc3-48ac-b511-d5a762aa711d",
                 "resourcePath": "sprites\\spr_portal\\spr_portal.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6dc064c0-ec2e-47b4-bd81-78fd595cf3b3",
+            "Value": {
+                "id": "4022cbbf-719b-46a4-a35c-c92b41ba5903",
+                "resourcePath": "objects\\obj_intersection\\obj_intersection.yy",
+                "resourceType": "GMObject"
             }
         },
         {
