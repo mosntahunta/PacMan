@@ -21,6 +21,15 @@ v_facing = 1; // +ve is down
 ///< direction to move when collision is no longer detected
 next_dir = LEFT;
 
+///< position array
+array_size = 10;
+for (var i = 0; i < array_size; i++) {
+	pos[i, 0] = x;
+	pos[i, 1] = y;
+}
+
+save_pos_timer = 15; // optimal value to be found later
+
 ///< states
 enum player_states
 {

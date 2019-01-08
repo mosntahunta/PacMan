@@ -19,3 +19,6 @@ if begin_path {
 	prev_dest_x = obj_player.x;
 	prev_dest_y = obj_player.y;
 }
+
+// animation
+anim();
