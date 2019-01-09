@@ -22,13 +22,14 @@ v_facing = 1; // +ve is down
 next_dir = LEFT;
 
 ///< position array
-array_size = 10;
+array_size = 50;
 for (var i = 0; i < array_size; i++) {
 	pos[i, 0] = x;
 	pos[i, 1] = y;
 }
 
-save_pos_timer = 15; // optimal value to be found later
+///< todo: this is temporary for testing the follow state
+steps = 0;
 
 ///< states
 enum player_states

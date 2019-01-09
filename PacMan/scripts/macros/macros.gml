@@ -13,6 +13,3 @@
 #macro RIGHT	1
 #macro UP		2
 #macro DOWN		3
-
-///< position update
-#macro SAVE_POS 0
