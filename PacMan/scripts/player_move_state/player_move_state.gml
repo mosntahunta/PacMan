@@ -16,11 +16,17 @@ for(var i = array_size - 1; i > 0; i--) {
 pos[0, 0] = x;
 pos[0, 1] = y;
 
-if steps > 200 {
-	// update the position of the ghosts that are following
-	if obj_ghost.state == ghost_states.FOLLOW {
-		obj_ghost.x = pos[30, 0];
-		obj_ghost.y = pos[30, 1];
+with obj_ghost {
+	if other.steps > 150 {
+		// update the position of the ghosts that are following
+		if state == ghost_states.FOLLOW {
+			x = other.pos[30, 0];
+			y = other.pos[30, 1];
+		}
+	}
+
+	if other.steps > 500 {
+		state = ghost_states.FLEE;
 	}
 }
 
