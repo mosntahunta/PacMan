@@ -22,6 +22,9 @@ next_dir = LEFT;
 prev_dest_x = 0;
 prev_dest_y = 0;
 
+///< transition timers
+to_chase_delay = 30;
+
 // states
 enum ghost_states
 {
@@ -32,7 +35,7 @@ enum ghost_states
 	FLEE
 }
 
-state = ghost_states.FOLLOW;
+state = ghost_states.IDLE;
 
 states_array[ghost_states.IDLE] = ghost_idle_state;
 states_array[ghost_states.WANDER] = ghost_wander_state;

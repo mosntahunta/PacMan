@@ -13,3 +13,6 @@
 #macro RIGHT	1
 #macro UP		2
 #macro DOWN		3
+
+///< ghost state transitions
+#macro START_CHASE 0

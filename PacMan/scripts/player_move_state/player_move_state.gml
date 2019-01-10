@@ -24,10 +24,6 @@ with obj_ghost {
 			y = other.pos[30, 1];
 		}
 	}
-
-	if other.steps > 500 {
-		state = ghost_states.FLEE;
-	}
 }
 
 // animation
