@@ -22,7 +22,7 @@ with obj_ghost {
 		var position = ds_list_find_index(other.follower_list, id);
 			
 		if position != -1 and position < other.max_followers {
-			var array_pos = position == 0 ? TILE_SIZE * (position + 1) : (TILE_SIZE / 2) * (position + 1)
+			var array_pos = (TILE_SIZE / 2) * position + TILE_SIZE;
 			x = other.pos[array_pos, 0];
 			y = other.pos[array_pos, 1];
 		}
