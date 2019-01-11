@@ -22,14 +22,14 @@ v_facing = 1; // +ve is down
 next_dir = LEFT;
 
 ///< position array
-array_size = 50;
+max_followers = 100;
+array_size = max_followers * TILE_SIZE;
 for (var i = 0; i < array_size; i++) {
 	pos[i, 0] = x;
 	pos[i, 1] = y;
 }
 
-///< todo: this is temporary for testing the follow state
-steps = 0;
+follower_list = ds_list_create();
 
 ///< states
 enum player_states

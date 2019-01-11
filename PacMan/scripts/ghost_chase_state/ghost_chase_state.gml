@@ -5,7 +5,7 @@
 var begin_path = false;
 
 with obj_player {
-	var distance_moved = distance_to_object(other) > global.tile_size * 2 ? global.tile_size * 2 : global.tile_size * 10;
+	var distance_moved = distance_to_object(other) > TILE_SIZE * 2 ? TILE_SIZE * 2 : TILE_SIZE * 10;
 	if distance_to_point(other.prev_dest_x, other.prev_dest_y) > distance_moved {
 		begin_path = true;
 	}

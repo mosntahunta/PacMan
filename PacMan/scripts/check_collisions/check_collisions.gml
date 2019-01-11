@@ -64,9 +64,9 @@ var t2 = tilemap_get_at_pixel(global.map, side + hsp, bbox_bottom);
 		
 if t1 != VOID or t2 != VOID {
 	if hsp > 0 {
-		x = x - (side mod global.tile_size) + global.tile_size - 1;
+		x = x - (side mod TILE_SIZE) + TILE_SIZE - 1;
 	} else {
-		x = x - (side mod global.tile_size);
+		x = x - (side mod TILE_SIZE);
 	}
 	hsp = 0;
 }
@@ -88,9 +88,9 @@ var t2 = tilemap_get_at_pixel(global.map, bbox_right, side + vsp);
 		
 if t1 != VOID or t2 != VOID {
 	if vsp > 0 {
-		y = y - (side mod global.tile_size) + global.tile_size - 1;
+		y = y - (side mod TILE_SIZE) + TILE_SIZE - 1;
 	} else {
-		y = y - (side mod global.tile_size);
+		y = y - (side mod TILE_SIZE);
 	}
 	vsp = 0;
 }

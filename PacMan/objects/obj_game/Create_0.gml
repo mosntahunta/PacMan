@@ -1,5 +1,4 @@
 macros();
-global.tile_size = 30;
 global.map = layer_tilemap_get_id("Collisions");
 
 global.grid = mp_grid_create(30, 30, (room_width - 60) / 60, (room_height - 60) / 60 , 60, 60);
