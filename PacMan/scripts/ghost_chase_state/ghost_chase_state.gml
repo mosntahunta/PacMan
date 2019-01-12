@@ -24,8 +24,8 @@ if begin_path {
 // if so, change the ghost's state to follow
 with obj_player {
 	if state == player_states.MOVE {
-		var x_spacing = hsp != 0 ? h_facing * 3 * TILE_SIZE : 0;
-		var y_spacing = vsp != 0 ? v_facing * 3 * TILE_SIZE : 0;
+		var x_spacing = hsp != 0 ? h_facing * 5 * TILE_SIZE : 0;
+		var y_spacing = vsp != 0 ? v_facing * 5 * TILE_SIZE : 0;
 		var dest_x = 0;
 		var dest_y = 0;
 		
@@ -39,6 +39,7 @@ with obj_player {
 		}
 		
 		if collision_line(x, y, dest_x, dest_y, other, false, false) and (ds_list_size(follower_list) < max_followers) {
+			path_end();
 			ds_list_add(follower_list, other);
 			other.state = ghost_states.FOLLOW;
 		}
