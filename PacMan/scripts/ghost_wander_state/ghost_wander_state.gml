@@ -23,5 +23,11 @@ apply_speed(hsp_max, vsp_max);
 
 check_collisions();
 
+// look for the player object in an rectangle area around the ghost		   
+var found_player_rect = point_in_rectangle(obj_player.x, obj_player.y, x - 10 * TILE_SIZE, y - 10 * TILE_SIZE, x + 10 * TILE_SIZE, y + 10 * TILE_SIZE);
+if found_player_rect {
+	state = ghost_states.CHASE;
+}
+
 // animation
 anim();
