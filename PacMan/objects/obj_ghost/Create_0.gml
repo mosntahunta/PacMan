@@ -25,7 +25,7 @@ prev_dest_y = 0;
 ///< transition timers
 to_chase_delay = 30;
 
-// states
+///< states
 enum ghost_states
 {
 	IDLE,
@@ -36,6 +36,7 @@ enum ghost_states
 }
 
 state = ghost_states.IDLE;
+previous_state = ghost_states.IDLE;
 
 states_array[ghost_states.IDLE] = ghost_idle_state;
 states_array[ghost_states.WANDER] = ghost_wander_state;

@@ -1,6 +1,3 @@
-// animation
-anim();
-
 // update the ghost's position based on the player's position array
 with obj_player {
 	if state == player_states.MOVE {
@@ -12,3 +9,6 @@ with obj_player {
 		}
 	}
 }
+
+// animation
+anim();

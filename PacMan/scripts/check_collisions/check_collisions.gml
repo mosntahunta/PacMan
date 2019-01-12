@@ -24,24 +24,6 @@ hsp -= hsp_decimal;
 vsp_decimal = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vsp_decimal;
 
-//
-// apply direction to speed
-//
-switch next_dir {
-	case LEFT:
-		hsp = -hsp_max;
-	break;
-	case RIGHT:
-		hsp = hsp_max;
-	break;
-	case UP:
-		vsp = -vsp_max;
-	break;
-	case DOWN:
-		vsp = vsp_max;
-	break;
-}
-
 // face the correct way
 if (hsp != 0.0) h_facing = sign(hsp);
 if (vsp != 0.0) v_facing = sign(vsp);

@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "f462c621-e745-460e-8489-c52711c328b5",
+            "Value": {
+                "id": "76be39a4-c46e-430a-94fb-cdeabbd37cc6",
+                "resourcePath": "scripts\\apply_speed\\apply_speed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f4b3b6b8-b70c-4334-8bb8-7bed549b58d8",
             "Value": {
                 "id": "2010178a-b25c-450b-9a06-fcdb28ec7e3a",
@@ -426,10 +434,11 @@
     "script_order": [
         "85a0f444-b78d-4dcd-8287-5b5fa22682e9",
         "4f3e454f-9745-4ad6-8e9f-c90f7dfcd0d7",
+        "f462c621-e745-460e-8489-c52711c328b5",
+        "04746e15-4d06-4098-a33f-e0893e954e60",
         "70a899d7-9a19-427f-bc26-d58cabfaa1b7",
         "30429767-42c1-4c6c-bf96-f76a081c05c6",
         "8f979f4a-7053-43bd-89f1-63fe11e6c817",
-        "04746e15-4d06-4098-a33f-e0893e954e60",
         "2a2f29cc-81c3-4a39-8c73-0bf32b4de77d",
         "6bbb3eae-9f86-4359-b5bf-9308df67b06c",
         "2d00a8f6-3aa8-46bf-9bb4-44eb9588324a",

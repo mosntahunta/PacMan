@@ -18,6 +18,9 @@ if hsp == 0 and vsp == 0 {
 		break;
 	}
 }
+
+apply_speed(hsp_max, vsp_max);
+
 check_collisions();
 
 // animation
