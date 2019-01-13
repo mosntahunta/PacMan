@@ -14,10 +14,14 @@ with obj_player {
 if begin_path {
 	var path = path_add();
 	if mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 0) {
-		path_start(path, 4, 0, 0);
+		path_start(path, 3.5, 0, 0);
 	}
 	prev_dest_x = obj_player.x;
 	prev_dest_y = obj_player.y;
+}
+
+if distance_to_object(obj_player) < 2 * TILE_SIZE {
+	path_speed = 1;
 }
 
 // check if the ghost is directly behind the player's trail - the follower list
