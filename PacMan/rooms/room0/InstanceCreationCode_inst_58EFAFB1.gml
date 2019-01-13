@@ -1,1 +1,0 @@
-state = ghost_states.WANDER;

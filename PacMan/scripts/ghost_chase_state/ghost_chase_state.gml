@@ -41,6 +41,16 @@ with obj_player {
 		if collision_line(x, y, dest_x, dest_y, other, false, false) and (ds_list_size(follower_list) < max_followers) {
 			path_end();
 			ds_list_add(follower_list, other);
+			
+			// adding to the list for the first time
+			if ds_list_size(follower_list) == 1 {
+				for (var i = 0; i < array_size; i++) {
+					pos[i, 0] = x;
+					pos[i, 1] = y;
+				}
+				other.visible = false;
+			}
+			
 			other.state = ghost_states.FOLLOW;
 		}
 	}
