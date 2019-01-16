@@ -8,8 +8,8 @@ var found_player_adj = place_meeting(x - TILE_SIZE, y, obj_player) or
 					   place_meeting(x, y - TILE_SIZE, obj_player) or 
 					   place_meeting(x, y + TILE_SIZE, obj_player);
 
-if found_player_adj and alarm[START_CHASE] < 0 {
-	alarm[START_CHASE] = to_chase_delay;
+if found_player_adj {
+	if alarm[BEGIN_FOLLOW] < 0 alarm[BEGIN_FOLLOW] = to_follow_delay;
 }
 
 anim();

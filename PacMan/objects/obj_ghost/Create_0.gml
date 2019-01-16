@@ -23,7 +23,10 @@ prev_dest_x = 0;
 prev_dest_y = 0;
 
 ///< transition timers
-to_chase_delay = 30;
+to_follow_delay = 30;
+
+///< lead ghost follower
+lead_ghost = false;
 
 ///< states
 enum ghost_states

@@ -21,16 +21,6 @@ v_facing = 1; // +ve is down
 ///< direction to move when collision is no longer detected
 next_dir = LEFT;
 
-///< position array
-max_followers = 100;
-array_size = max_followers * TILE_SIZE;
-for (var i = 0; i < array_size; i++) {
-	pos[i, 0] = x;
-	pos[i, 1] = y;
-}
-
-follower_list = ds_list_create();
-
 ///< states
 enum player_states
 {
