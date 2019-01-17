@@ -14,7 +14,7 @@ check_collisions();
 if keyboard_check_pressed(vk_space) {
 	with obj_ghost {
 		if state == ghost_states.FLEE {
-			state = previous_state == ghost_states.FOLLOW ? ghost_states.CHASE : previous_state;
+			state = previous_state;
 		} else {
 			// remove the ghost from the follower list
 			var index = ds_list_find_index(obj_followers.follower_list, id);
