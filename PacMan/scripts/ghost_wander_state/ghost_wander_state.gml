@@ -23,10 +23,13 @@ apply_speed(hsp_max, vsp_max);
 
 check_collisions();
 
-// look for the player object in an rectangle area around the ghost		   
-var found_player_rect = point_in_rectangle(obj_player.x, obj_player.y, x - 3 * TILE_SIZE, y - 3 * TILE_SIZE, x + 3 * TILE_SIZE, y + 3 * TILE_SIZE);
-if found_player_rect {
-	if alarm[BEGIN_FOLLOW] < 0 alarm[BEGIN_FOLLOW] = to_follow_delay;
+// look ahead for the player object
+var x2 = hsp != 0 ? x + sign(hsp) * TILE_SIZE * 4 : x;
+var y2 = vsp != 0 ? y + sign(vsp) * TILE_SIZE * 4 : y;
+
+var player = collision_line( x, y, x2 , y2, obj_player, false, true );
+if player != noone {
+	state = ghost_states.WANDER_TRANSITION;
 }
 
 // animation

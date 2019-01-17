@@ -1,6 +1,6 @@
 // update the player trail based on its current position
 with obj_player {
-	if state == player_states.MOVE {
+	if state == player_states.MOVE and !ds_list_empty(other.follower_list) {
 		for(var i = other.player_trail_size - 1; i > 0; i--) {
 			other.player_trail[i, 0] = other.player_trail[i - 1, 0];
 			other.player_trail[i, 1] = other.player_trail[i - 1, 1];
@@ -15,20 +15,16 @@ with obj_player {
 // and record the ghost's trail
 with obj_ghost {
 	if lead_ghost and state = ghost_states.FOLLOW {
-		//if distance_to_object(obj_player) < TILE_SIZE {
-		//	move_towards_point(obj_player.x, obj_player.y, 1.0);
-		//} else {
-			x = other.player_trail[TILE_SIZE, 0];
-			y = other.player_trail[TILE_SIZE, 1];
+		x = other.player_trail[TILE_SIZE, 0];
+		y = other.player_trail[TILE_SIZE, 1];
 		
-			for(var i = other.ghost_trail_size - 1; i > 0; i--) {
-				other.lead_ghost_trail[i, 0] = other.lead_ghost_trail[i - 1, 0];
-				other.lead_ghost_trail[i, 1] = other.lead_ghost_trail[i - 1, 1];
-			}
+		for(var i = other.ghost_trail_size - 1; i > 0; i--) {
+			other.lead_ghost_trail[i, 0] = other.lead_ghost_trail[i - 1, 0];
+			other.lead_ghost_trail[i, 1] = other.lead_ghost_trail[i - 1, 1];
+		}
 
-			other.lead_ghost_trail[0, 0] = x;
-			other.lead_ghost_trail[0, 1] = y;
-		//}
+		other.lead_ghost_trail[0, 0] = x;
+		other.lead_ghost_trail[0, 1] = y;
 	}
 }
 	

@@ -9,7 +9,7 @@ var found_player_adj = place_meeting(x - TILE_SIZE, y, obj_player) or
 					   place_meeting(x, y + TILE_SIZE, obj_player);
 
 if found_player_adj {
-	if alarm[BEGIN_FOLLOW] < 0 alarm[BEGIN_FOLLOW] = to_follow_delay;
+	state = ghost_states.IDLE_TRANSITION;
 }
 
 anim();
