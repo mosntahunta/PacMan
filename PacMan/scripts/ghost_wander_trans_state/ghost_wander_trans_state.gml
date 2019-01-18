@@ -20,3 +20,12 @@ if ds_list_size(obj_followers.follower_list) == 0 {
 		state = ghost_states.FOLLOW;
 	}
 }
+
+// continue moving
+choose_direction();
+
+apply_speed(hsp_max, vsp_max);
+
+check_collisions();
+
+anim();
