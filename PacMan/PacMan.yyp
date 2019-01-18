@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "3d2ec122-cd0f-4550-88a8-016e81d6c3c4",
+            "Value": {
+                "id": "f4936bf9-3778-4d22-a9f7-5cd035836ae1",
+                "resourcePath": "scripts\\find_obj_adjacent\\find_obj_adjacent.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3d954214-11df-47a4-b126-afc873b07b64",
             "Value": {
                 "id": "35c36d73-edd3-404f-99ff-e06b27e27ab9",
@@ -444,6 +452,7 @@
         "4f3e454f-9745-4ad6-8e9f-c90f7dfcd0d7",
         "f462c621-e745-460e-8489-c52711c328b5",
         "04746e15-4d06-4098-a33f-e0893e954e60",
+        "3d2ec122-cd0f-4550-88a8-016e81d6c3c4",
         "70a899d7-9a19-427f-bc26-d58cabfaa1b7",
         "30429767-42c1-4c6c-bf96-f76a081c05c6",
         "8f979f4a-7053-43bd-89f1-63fe11e6c817",
