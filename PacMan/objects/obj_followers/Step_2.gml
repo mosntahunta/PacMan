@@ -1,6 +1,6 @@
 // update the player trail based on its current position
 with obj_player {
-	if state == player_states.MOVE and !ds_list_empty(other.follower_list) {
+	if state == player_states.MOVE {
 		for(var i = other.player_trail_size - 1; i > 0; i--) {
 			other.player_trail[i, 0] = other.player_trail[i - 1, 0];
 			other.player_trail[i, 1] = other.player_trail[i - 1, 1];
