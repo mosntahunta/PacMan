@@ -1,0 +1,1 @@
+return sign(h_facing) == sign(obj_ghost.x - x) or sign(v_facing) == sign(obj_ghost.y - y);
