@@ -26,6 +26,8 @@ choose_direction();
 
 apply_speed(hsp_max, vsp_max);
 
+apply_slow_motion();
+
 check_collisions();
 
 anim();

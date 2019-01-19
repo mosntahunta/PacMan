@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "116a922b-e9d9-443f-b3e1-35abbb072728",
+            "Value": {
+                "id": "f9f49016-1a56-461b-97ca-4c1b1db55126",
+                "resourcePath": "scripts\\apply_slow_motion\\apply_slow_motion.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "126c5d16-71cb-4c34-93eb-f03011b416df",
             "Value": {
                 "id": "3dc79bdd-9e92-4c0e-9896-50a75fc12d7e",
@@ -469,9 +477,9 @@
         "f462c621-e745-460e-8489-c52711c328b5",
         "04746e15-4d06-4098-a33f-e0893e954e60",
         "3d2ec122-cd0f-4550-88a8-016e81d6c3c4",
+        "8f979f4a-7053-43bd-89f1-63fe11e6c817",
         "70a899d7-9a19-427f-bc26-d58cabfaa1b7",
         "30429767-42c1-4c6c-bf96-f76a081c05c6",
-        "8f979f4a-7053-43bd-89f1-63fe11e6c817",
         "2a2f29cc-81c3-4a39-8c73-0bf32b4de77d",
         "6bbb3eae-9f86-4359-b5bf-9308df67b06c",
         "e37c8f02-3ede-41dc-928a-76255cd0b94f",
@@ -481,7 +489,8 @@
         "ad037dab-ee0a-4ceb-a895-78b1a78ac39a",
         "3c3ba372-3f88-4557-9cb0-17b075b42303",
         "6a471a21-7a9c-41bc-8857-e68ddf872270",
-        "1a1920a7-979b-41b3-b012-4c49a8ae632e"
+        "1a1920a7-979b-41b3-b012-4c49a8ae632e",
+        "116a922b-e9d9-443f-b3e1-35abbb072728"
     ],
     "tutorial": ""
 }
