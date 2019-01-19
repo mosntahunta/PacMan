@@ -23,10 +23,10 @@ prev_dest_x = 0;
 prev_dest_y = 0;
 
 ///< transition timers
-to_follow_delay = 30;
+to_chase_delay = 30;
 
-///< lead ghost follower
-lead_ghost = false;
+path = path_add();
+entering_portal = false;
 
 ///< states
 enum ghost_states
@@ -35,6 +35,7 @@ enum ghost_states
 	WANDER,
 	IDLE_TRANSITION,
 	WANDER_TRANSITION,
+	CHASE,
 	FOLLOW,
 	FLEE
 }
@@ -46,6 +47,7 @@ states_array[ghost_states.IDLE] = ghost_idle_state;
 states_array[ghost_states.IDLE_TRANSITION] = ghost_idle_trans_state;
 states_array[ghost_states.WANDER] = ghost_wander_state;
 states_array[ghost_states.WANDER_TRANSITION] = ghost_wander_trans_state;
+states_array[ghost_states.CHASE] = ghost_chase_state;
 states_array[ghost_states.FOLLOW] = ghost_follow_state;
 states_array[ghost_states.FLEE] = ghost_flee_state;
 
@@ -53,5 +55,6 @@ sprites_array[ghost_states.IDLE] = spr_ghost_idle;
 sprites_array[ghost_states.IDLE_TRANSITION] = spr_ghost_idle;
 sprites_array[ghost_states.WANDER] = spr_ghost_wander;
 sprites_array[ghost_states.WANDER_TRANSITION] = spr_ghost_wander;
+sprites_array[ghost_states.CHASE] = spr_ghost_chase;
 sprites_array[ghost_states.FOLLOW] = spr_ghost_follow;
 sprites_array[ghost_states.FLEE] = spr_ghost_flee;

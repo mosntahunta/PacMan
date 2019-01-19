@@ -21,6 +21,9 @@ v_facing = 1; // +ve is down
 ///< direction to move when collision is no longer detected
 next_dir = LEFT;
 
+///< portal entered
+last_entered_portal = -1;
+
 ///< states
 enum player_states
 {

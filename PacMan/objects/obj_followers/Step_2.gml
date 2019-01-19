@@ -1,23 +1,7 @@
-// update the player trail based on its current position
-with obj_player {
-	if state == player_states.MOVE {
-		for(var i = other.player_trail_size - 1; i > 0; i--) {
-			other.player_trail[i, 0] = other.player_trail[i - 1, 0];
-			other.player_trail[i, 1] = other.player_trail[i - 1, 1];
-		}
-
-		other.player_trail[0, 0] = x;
-		other.player_trail[0, 1] = y;
-	}
-}
-
 // update the lead ghost's position based on the player's position array
 // and record the ghost's trail
 with obj_ghost {
-	if lead_ghost and state = ghost_states.FOLLOW {
-		x = other.player_trail[TILE_SIZE, 0];
-		y = other.player_trail[TILE_SIZE, 1];
-		
+	if state = ghost_states.CHASE {
 		for(var i = other.ghost_trail_size - 1; i > 0; i--) {
 			other.lead_ghost_trail[i, 0] = other.lead_ghost_trail[i - 1, 0];
 			other.lead_ghost_trail[i, 1] = other.lead_ghost_trail[i - 1, 1];

@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "7d397b51-8485-411f-8e54-9498589bc6ba",
+            "Value": {
+                "id": "47806903-595f-4314-bf61-b09ae5b82009",
+                "resourcePath": "scripts\\ghost_chase_state\\ghost_chase_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7f74f5af-acdf-4d3e-887a-02122090cdac",
             "Value": {
                 "id": "00e95feb-5598-49ef-9d72-662d01806996",
@@ -308,6 +316,14 @@
                 "id": "e6972bcc-1585-4f67-8f54-c5bc38578838",
                 "resourcePath": "scripts\\macros\\macros.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "87779c65-5365-4883-96cc-5e2887f64bf8",
+            "Value": {
+                "id": "eac5c01e-6c99-4fa8-a5a6-26bae324f366",
+                "resourcePath": "sprites\\spr_ghost_chase\\spr_ghost_chase.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -487,6 +503,7 @@
         "dfc0f738-c210-43c9-ae8d-b8c0f2766981",
         "1696a824-0f46-491b-b048-50db3edc3a98",
         "ad037dab-ee0a-4ceb-a895-78b1a78ac39a",
+        "7d397b51-8485-411f-8e54-9498589bc6ba",
         "3c3ba372-3f88-4557-9cb0-17b075b42303",
         "6a471a21-7a9c-41bc-8857-e68ddf872270",
         "1a1920a7-979b-41b3-b012-4c49a8ae632e",
