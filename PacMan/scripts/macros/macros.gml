@@ -19,3 +19,8 @@
 
 ///< tile size
 #macro TILE_SIZE 30
+
+///< scoring
+#macro COIN_SCORE 10
+#macro FRUIT_SCORE 100
+#macro GHOST_SCORE 1000
