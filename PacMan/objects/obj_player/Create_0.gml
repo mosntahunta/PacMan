@@ -8,6 +8,9 @@ down = 0;
 hsp_max = 4;
 vsp_max = 4;
 
+hsp_apply = hsp_max;
+vsp_apply = vsp_max;
+
 hsp = 0;
 vsp = 0;
 
@@ -23,6 +26,9 @@ next_dir = LEFT;
 
 ///< portal entered
 last_entered_portal = -1;
+
+///< in slow motion
+slowed = false;
 
 ///< states
 enum player_states

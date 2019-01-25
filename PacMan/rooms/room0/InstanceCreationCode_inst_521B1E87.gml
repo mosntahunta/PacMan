@@ -1,1 +1,1 @@
-state = ghost_states.WANDER;
+state = ghost_states.IDLE;

@@ -14,9 +14,7 @@ if ds_list_size(obj_followers.follower_list) == 0 {
 // continue moving
 choose_direction();
 
-apply_speed(hsp_max, vsp_max);
-
-apply_slow_motion();
+apply_speed(hsp_apply, vsp_apply);
 
 check_collisions();
 

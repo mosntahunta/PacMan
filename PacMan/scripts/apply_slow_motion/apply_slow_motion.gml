@@ -2,9 +2,9 @@
 
 with obj_player {
 	if facing_ghost() and distance_to_object(obj_ghost) < TILE_SIZE * 2 {
-		other.hsp = other.hsp / 25;
-		other.vsp = other.vsp / 25;
-		hsp = hsp / 2;
-		vsp = vsp / 2;
+		other.hsp = other.hsp / 10;
+		other.vsp = other.vsp / 10;
+		hsp = hsp / 5;
+		vsp = vsp / 5;
 	}
 }

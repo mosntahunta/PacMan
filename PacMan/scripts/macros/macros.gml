@@ -16,6 +16,7 @@
 
 ///< ghost state transitions
 #macro BEGIN_CHASE 0
+#macro ALLOW_CHASE 1
 
 ///< tile size
 #macro TILE_SIZE 30

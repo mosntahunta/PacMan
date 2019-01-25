@@ -5,6 +5,9 @@ image_speed = 0;
 hsp_max = 4;
 vsp_max = 4;
 
+hsp_apply = hsp_max;
+vsp_apply = vsp_max;
+
 hsp = 0;
 vsp = 0;
 
@@ -27,6 +30,8 @@ to_chase_delay = 30;
 
 path = path_add();
 entering_portal = false;
+
+slowed = false;
 
 ///< states
 enum ghost_states

@@ -4,9 +4,7 @@
 
 choose_direction();
 
-apply_speed(hsp_max, vsp_max);
-
-apply_slow_motion();
+apply_speed(hsp_apply, vsp_apply);
 
 check_collisions();
 
