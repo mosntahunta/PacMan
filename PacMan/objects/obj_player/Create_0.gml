@@ -30,6 +30,8 @@ last_entered_portal = -1;
 ///< in slow motion
 slowed = false;
 
+flee_timer = room_speed * 10;
+
 ///< states
 enum player_states
 {

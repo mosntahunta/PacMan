@@ -18,10 +18,13 @@
 #macro BEGIN_CHASE 0
 #macro ALLOW_CHASE 1
 
+#macro GHOST_FLEE 0
+
 ///< tile size
 #macro TILE_SIZE 30
 
 ///< scoring
-#macro COIN_SCORE 10
-#macro FRUIT_SCORE 100
-#macro GHOST_SCORE 1000
+#macro COIN_SCORE  10
+#macro CANDY_SCORE 1000
+#macro FRUIT_SCORE 1000
+#macro GHOST_SCORE 10000

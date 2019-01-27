@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0a406e74-e881-4498-bac4-53e5baebe511",
+            "Value": {
+                "id": "b1462a3b-9764-4f51-95c7-166211c0ea8b",
+                "resourcePath": "sprites\\spr_coin\\spr_coin.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "116a922b-e9d9-443f-b3e1-35abbb072728",
             "Value": {
                 "id": "f9f49016-1a56-461b-97ca-4c1b1db55126",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "4f140e1a-c256-4859-90b6-a018ea9d8ee9",
+            "Value": {
+                "id": "a00ea26f-d532-40be-a3d9-db217eb6bce1",
+                "resourcePath": "sprites\\spr_candy\\spr_candy.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f3e454f-9745-4ad6-8e9f-c90f7dfcd0d7",
             "Value": {
                 "id": "7f68cdcc-9122-4b1d-a328-9f501f0baed8",
@@ -239,11 +255,27 @@
             }
         },
         {
+            "Key": "5ba07226-58f7-470b-9f0e-1dd4d492bcf5",
+            "Value": {
+                "id": "a238ff88-aacc-48ac-a0bb-05351fb3ae31",
+                "resourcePath": "objects\\obj_fruit\\obj_fruit.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "622d3278-e4a0-4811-95f5-530924e80701",
             "Value": {
                 "id": "7c191ffe-ecfa-41c3-89bf-ab33ef808c86",
                 "resourcePath": "views\\622d3278-e4a0-4811-95f5-530924e80701.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "67c73a63-a1c9-4ffe-b3fd-614aa29e0341",
+            "Value": {
+                "id": "7c3a7066-5933-477b-bd5c-9e7397831e1c",
+                "resourcePath": "sprites\\spr_fruit\\spr_fruit.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -343,6 +375,14 @@
             }
         },
         {
+            "Key": "98addf02-cef9-42d4-8946-e70dee42f48e",
+            "Value": {
+                "id": "b67c2154-9d19-4194-9668-aa08784ed81b",
+                "resourcePath": "objects\\obj_coin\\obj_coin.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9cc7daad-edc0-423e-ad8e-7483b230b21d",
             "Value": {
                 "id": "0eaa2114-9075-4975-9fdf-2162859ebf06",
@@ -388,6 +428,14 @@
                 "id": "3538b17d-a9d3-4c65-83fb-ebd46df10bcd",
                 "resourcePath": "views\\c523773a-f236-4888-98f8-f204402ea937.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c6f7f7d8-6e51-43b0-b9df-e79b4100cc17",
+            "Value": {
+                "id": "72e81630-601c-4623-99ce-21b20c1da068",
+                "resourcePath": "objects\\obj_candy\\obj_candy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
