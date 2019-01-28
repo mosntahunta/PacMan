@@ -8,8 +8,16 @@ with other {
 			} else if other.side == RIGHT { 
 				generate_coins(LEFT, random_number);
 			}
+			
+			num_fruits_eaten++;
+			if num_fruits_eaten % 7 == 0 and num_fruits_eaten != 0 {
+				if other.side == LEFT { 
+					instance_create_layer(1320, 780, "Items", obj_candy);
+				} else if other.side == RIGHT { 
+					instance_create_layer(600, 300, "Items", obj_candy);
+				}
+			}
 		}
-		show_debug_message("fruit destroyed: " + string(id));
 		has_collided = true;
 		instance_destroy();
 	}

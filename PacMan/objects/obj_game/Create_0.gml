@@ -18,6 +18,8 @@ spawn = true
 left_coins = ds_list_create();
 right_coins = ds_list_create();
 
+num_fruits_eaten = 0;
+
 coin_spawn_left_list[0] = ds_grid_create(13, 2);
 coin_spawn_left_list[1] = ds_grid_create(6, 2);
 coin_spawn_left_list[2] = ds_grid_create(12, 2);
