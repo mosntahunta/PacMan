@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_coin",
     "eventList": [
-        
+        {
+            "id": "9b428d42-8a4b-470a-8438-56a0cc412064",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "98addf02-cef9-42d4-8946-e70dee42f48e"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

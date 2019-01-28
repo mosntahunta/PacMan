@@ -423,6 +423,22 @@
             }
         },
         {
+            "Key": "bc5e5b47-3766-43c7-963d-c98572586b04",
+            "Value": {
+                "id": "e930e22e-6ae8-4520-871b-cea5c062eeb9",
+                "resourcePath": "scripts\\generate_coins\\generate_coins.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "be424c9d-ef88-4ae0-a069-f3d480f9239e",
+            "Value": {
+                "id": "a01fd905-8a75-4af8-aee0-820058469b1f",
+                "resourcePath": "views\\be424c9d-ef88-4ae0-a069-f3d480f9239e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c523773a-f236-4888-98f8-f204402ea937",
             "Value": {
                 "id": "3538b17d-a9d3-4c65-83fb-ebd46df10bcd",
@@ -555,7 +571,8 @@
         "3c3ba372-3f88-4557-9cb0-17b075b42303",
         "6a471a21-7a9c-41bc-8857-e68ddf872270",
         "1a1920a7-979b-41b3-b012-4c49a8ae632e",
-        "116a922b-e9d9-443f-b3e1-35abbb072728"
+        "116a922b-e9d9-443f-b3e1-35abbb072728",
+        "bc5e5b47-3766-43c7-963d-c98572586b04"
     ],
     "tutorial": ""
 }
