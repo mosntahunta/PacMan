@@ -21,6 +21,8 @@ v_facing = 1; // +ve is down
 ///< direction to move when collision is no longer detected
 next_dir = LEFT;
 
+side = LEFT;
+
 ///< pathing to obj_player
 prev_dest_x = 0;
 prev_dest_y = 0;

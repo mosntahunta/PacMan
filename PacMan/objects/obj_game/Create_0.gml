@@ -1,4 +1,5 @@
 macros();
+randomize();
 global.map = layer_tilemap_get_id("Collisions");
 
 global.grid = mp_grid_create(30, 30, (room_width - 60) / 60, (room_height - 60) / 60 , 60, 60);
@@ -15,10 +16,105 @@ for(var xx = 30; xx < room_width - 30; xx += 60) {
 ///< map generator
 spawn = true
 
+num_fruits_eaten = 0;
+
+// ghosts
+left_ghosts = ds_list_create();
+right_ghosts = ds_list_create();
+
+ghost_spawn_left_list[0] = ds_grid_create(5, 2);
+ghost_spawn_left_list[1] = ds_grid_create(5, 2);
+ghost_spawn_left_list[2] = ds_grid_create(4, 2);
+ghost_spawn_left_list[3] = ds_grid_create(2, 2);
+
+ghost_spawn_right_list[0] = ds_grid_create(5, 2);
+ghost_spawn_right_list[1] = ds_grid_create(5, 2);
+ghost_spawn_right_list[2] = ds_grid_create(4, 2);
+ghost_spawn_right_list[3] = ds_grid_create(2, 2);
+
+// #1
+ds_grid_set(ghost_spawn_left_list[0], 0, 0, 420)
+ds_grid_set(ghost_spawn_left_list[0], 0, 1, 420)
+ds_grid_set(ghost_spawn_left_list[0], 1, 0, 420)
+ds_grid_set(ghost_spawn_left_list[0], 1, 1, 660)
+ds_grid_set(ghost_spawn_left_list[0], 2, 0, 180)
+ds_grid_set(ghost_spawn_left_list[0], 2, 1, 780)
+ds_grid_set(ghost_spawn_left_list[0], 3, 0, 300)
+ds_grid_set(ghost_spawn_left_list[0], 3, 1, 540)
+ds_grid_set(ghost_spawn_left_list[0], 4, 0, 180)
+ds_grid_set(ghost_spawn_left_list[0], 4, 1, 300)
+
+ds_grid_set(ghost_spawn_right_list[0], 0, 0, 1500)
+ds_grid_set(ghost_spawn_right_list[0], 0, 1, 420)
+ds_grid_set(ghost_spawn_right_list[0], 1, 0, 1500)
+ds_grid_set(ghost_spawn_right_list[0], 1, 1, 660)
+ds_grid_set(ghost_spawn_right_list[0], 2, 0, 1740)
+ds_grid_set(ghost_spawn_right_list[0], 2, 1, 780)
+ds_grid_set(ghost_spawn_right_list[0], 3, 0, 1620)
+ds_grid_set(ghost_spawn_right_list[0], 3, 1, 540)
+ds_grid_set(ghost_spawn_right_list[0], 4, 0, 1740)
+ds_grid_set(ghost_spawn_right_list[0], 4, 1, 300)
+
+// #2
+ds_grid_set(ghost_spawn_left_list[1], 0, 0, 120)
+ds_grid_set(ghost_spawn_left_list[1], 0, 1, 840)
+ds_grid_set(ghost_spawn_left_list[1], 1, 0, 120)
+ds_grid_set(ghost_spawn_left_list[1], 1, 1, 240)
+ds_grid_set(ghost_spawn_left_list[1], 2, 0, 420)
+ds_grid_set(ghost_spawn_left_list[1], 2, 1, 780)
+ds_grid_set(ghost_spawn_left_list[1], 3, 0, 420)
+ds_grid_set(ghost_spawn_left_list[1], 3, 1, 300)
+ds_grid_set(ghost_spawn_left_list[1], 4, 0, 540)
+ds_grid_set(ghost_spawn_left_list[1], 4, 1, 540)
+
+ds_grid_set(ghost_spawn_right_list[1], 0, 0, 1800)
+ds_grid_set(ghost_spawn_right_list[1], 0, 1, 840)
+ds_grid_set(ghost_spawn_right_list[1], 1, 0, 1800)
+ds_grid_set(ghost_spawn_right_list[1], 1, 1, 240)
+ds_grid_set(ghost_spawn_right_list[1], 2, 0, 1500)
+ds_grid_set(ghost_spawn_right_list[1], 2, 1, 780)
+ds_grid_set(ghost_spawn_right_list[1], 3, 0, 1500)
+ds_grid_set(ghost_spawn_right_list[1], 3, 1, 300)
+ds_grid_set(ghost_spawn_right_list[1], 4, 0, 1380)
+ds_grid_set(ghost_spawn_right_list[1], 4, 1, 540)
+
+// #3
+ds_grid_set(ghost_spawn_left_list[2], 0, 0, 540)
+ds_grid_set(ghost_spawn_left_list[2], 0, 1, 780)
+ds_grid_set(ghost_spawn_left_list[2], 1, 0, 180)
+ds_grid_set(ghost_spawn_left_list[2], 1, 1, 780)
+ds_grid_set(ghost_spawn_left_list[2], 2, 0, 540)
+ds_grid_set(ghost_spawn_left_list[2], 2, 1, 300)
+ds_grid_set(ghost_spawn_left_list[2], 3, 0, 180)
+ds_grid_set(ghost_spawn_left_list[2], 3, 1, 300)
+
+ds_grid_set(ghost_spawn_right_list[2], 0, 0, 1380)
+ds_grid_set(ghost_spawn_right_list[2], 0, 1, 780)
+ds_grid_set(ghost_spawn_right_list[2], 1, 0, 1740)
+ds_grid_set(ghost_spawn_right_list[2], 1, 1, 780)
+ds_grid_set(ghost_spawn_right_list[2], 2, 0, 1380)
+ds_grid_set(ghost_spawn_right_list[2], 2, 1, 300)
+ds_grid_set(ghost_spawn_right_list[2], 3, 0, 1740)
+ds_grid_set(ghost_spawn_right_list[2], 3, 1, 300)
+
+// #4
+ds_grid_set(ghost_spawn_left_list[3], 0, 0, 720)
+ds_grid_set(ghost_spawn_left_list[3], 0, 1, 420)
+ds_grid_set(ghost_spawn_left_list[3], 1, 0, 720)
+ds_grid_set(ghost_spawn_left_list[3], 1, 1, 660)
+
+ds_grid_set(ghost_spawn_right_list[3], 0, 0, 1200)
+ds_grid_set(ghost_spawn_right_list[3], 0, 1, 420)
+ds_grid_set(ghost_spawn_right_list[3], 1, 0, 1200)
+ds_grid_set(ghost_spawn_right_list[3], 1, 1, 660)
+
+// populate the map with the initial ghosts
+generate_ghosts(LEFT, 3);
+generate_ghosts(RIGHT, 3);
+
+// coins
 left_coins = ds_list_create();
 right_coins = ds_list_create();
-
-num_fruits_eaten = 0;
 
 coin_spawn_left_list[0] = ds_grid_create(13, 2);
 coin_spawn_left_list[1] = ds_grid_create(6, 2);
