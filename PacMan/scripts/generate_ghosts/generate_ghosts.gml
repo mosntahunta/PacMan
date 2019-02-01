@@ -16,9 +16,6 @@ if side == LEFT {
 								ds_grid_get(ghost_spawn_left_list[type], i, 1), 
 								"Instances", 
 								obj_ghost);
-		show_debug_message("type: " + string(type));
-		show_debug_message("x: " + string(ds_grid_get(ghost_spawn_left_list[type], i, 0)));
-		show_debug_message("y: " + string(ds_grid_get(ghost_spawn_left_list[type], i, 1)));
 		inst.side = side;
 		inst.state = ghost_states.IDLE;
 		ds_list_add(left_ghosts, inst);
