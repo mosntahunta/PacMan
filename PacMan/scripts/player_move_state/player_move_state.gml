@@ -23,8 +23,8 @@ with obj_ghost {
 			var idle_ghost = collision_line(x, y, x2 , y2, other, false, true);
 			if idle_ghost != noone {
 				var distance = distance_to_object(other);
-				hsp_apply = hsp_max * distance / threshold;
-				vsp_apply = vsp_max * distance / threshold;
+				hsp_apply = max(0.5, hsp_max * distance / threshold);
+				vsp_apply = max(0.5, vsp_max * distance / threshold);
 				slowed = true;
 				enter_slow_motion = true;
 			}
@@ -47,8 +47,8 @@ with obj_ghost {
 			if state == ghost_states.CHASE {
 				path_speed = 2 * distance / threshold;
 			} else {
-				hsp_apply = 2 * distance / threshold;
-				vsp_apply = 2 * distance / threshold;	
+				hsp_apply = max(0.5, 2 * distance / threshold);
+				vsp_apply = max(0.5, 2 * distance / threshold);	
 			}
 			enter_slow_motion = true;
 			other.slowed = true;
