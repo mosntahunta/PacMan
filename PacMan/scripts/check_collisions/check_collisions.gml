@@ -2,6 +2,29 @@
 // check collisions
 //
 
+if hsp == 0 hsp_decimal = 0;
+if vsp == 0 vsp_decimal = 0;
+
+//
+// floor decimals
+//
+// gamemaker allows subpixel movement which does not work with
+// tilebased collisions as tiles are lined up to whole pixels
+//
+
+// apply carried over decimals
+hsp += hsp_decimal;
+vsp += vsp_decimal;
+
+// horizontal
+hsp_decimal = hsp - (floor(abs(hsp)) * sign(hsp));
+hsp -= hsp_decimal;
+
+// vertical
+vsp_decimal = vsp - (floor(abs(vsp)) * sign(vsp));
+vsp -= vsp_decimal;
+
+
 // face the correct way
 if (hsp != 0.0) h_facing = sign(hsp);
 if (vsp != 0.0) v_facing = sign(vsp);
